@@ -3,7 +3,8 @@ function setup() {
     createCanvas(400, 400);
     background(10);
 
-    socket = io.connect('http://localhost:3001');
+    //socket = io.connect('http://localhost:3001');
+    socket = io.connect();
     socket.on('connect', (sokcet) => {
         console.log(socket.id)
     })
