@@ -9,16 +9,16 @@ function setup() {
         console.log(socket.id)
     })
     socket.on('mouse', (msg)=>{
-        fill(100)
-        stroke(255, 20, 100);
-        ellipse(msg.x, msg.y, 30);
+        fill('red')
+        //stroke(255, 20, 100);
+        ellipse(msg.x, msg.y, 15);
     })
   }
   function mouseDragged() {
       console.log(mouseX, mouseY);
-      fill(100)
-      stroke(255);
-      ellipse(mouseX, mouseY, 30);
+      fill('green')
+      //stroke(255);
+      ellipse(mouseX, mouseY, 15);
       const data = {
           x: mouseX,
           y: mouseY
@@ -26,7 +26,7 @@ function setup() {
       socket.emit('mouse', data)
   }
   
-  function draw() {
+  function draw(color) {
   
    
   }
