@@ -3,7 +3,7 @@ let stars = [];
 let speed;
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth/2, windowHeight/2);
   canvas.parent('jumbo-canvas')
   for (let i = 0; i < 800; i++) {
     stars[i] = new Star();
