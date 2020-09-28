@@ -7,7 +7,6 @@ function setup() {
   objects.push(ship);
 }
 function keyPressed() {
-  console.log(keyCode);
   ship.move(keyCode);
 }
 

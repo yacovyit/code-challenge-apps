@@ -10,6 +10,7 @@ class Ship {
     draw() {
         fill(255);
         this.keyIsDown();
+        this.vlidation();
         rect(this.x, this.y, this.w, this.h); 
     }
 
@@ -26,5 +27,12 @@ class Ship {
         } else if (keyIsDown(RIGHT_ARROW)) {
             this.x += this.speed;
         } 
+    }
+    vlidation() {
+        if (this.x >= width - this.w)  {
+            this.x = width - this.w; 
+        } else if (this.x <= 0) {
+            this.x = 0;
+        }
     }
 }
