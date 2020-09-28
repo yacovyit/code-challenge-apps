@@ -4,14 +4,24 @@ class Ship {
         this.y = y;
         this.w = w;
         this.h = h; 
-        this.speed = speed; 
+        this.speed = speed;
+        this.barrelWidth = this.w / 5;
+        this. barrelHeight = this.h;
     }
 
     draw() {
+        // ship color
         fill(255);
+        
+        // move if key is pressed
         this.keyIsDown();
+        // keep ship in screen border
         this.vlidation();
-        rect(this.x, this.y, this.w, this.h); 
+        
+        // ship body
+        rect(this.x, this.y, this.w, this.h);
+        // ship barrel
+        rect(this.x + (this.w  - this.barrelWidth)/ 2 ,this.y - this.barrelHeight, this.barrelWidth, this.barrelHeight); 
     }
 
     move(keyCode) {
